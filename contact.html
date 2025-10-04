@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Kimtex</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Kimtex</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav id="primaryNav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Contact Me</h1>
+    <form id="contactForm" class="contact-form" novalidate>
+      <label>
+        Name
+        <input type="text" name="name" id="name" required minlength="2" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" id="email" required />
+      </label>
+      <label>
+        Message
+        <textarea name="message" id="message" required minlength="10"></textarea>
+      </label>
+      <button type="submit" class="btn">Send</button>
+      <p class="form-status" id="status" aria-live="polite"></p>
+    </form>
+    <p>Alternatively: <a href="mailto:edukimtex@gmail.com">Click here to Email</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year3"></span> Kimtex. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

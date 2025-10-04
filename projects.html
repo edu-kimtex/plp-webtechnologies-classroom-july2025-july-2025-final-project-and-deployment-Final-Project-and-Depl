@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Kimtex</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Kimtex</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav id="primaryNav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container content">
+    <h1>My Projects</h1>
+    <p>Here are some of the web projects I’ve worked on, showcasing my skills in HTML, CSS, JavaScript, and backend integration.</p>
+
+    <section class="project-grid">
+      <!-- Project 1 -->
+      <article class="project-card reveal">
+        
+        <div class="project-info">
+          <h3>Web-Based Bookshop System</h3>
+          <p>A PHP and MySQL system with M-Pesa integration, admin panel, and real-time sales reporting.</p>
+          <button class="btn view-details" data-project="bookshop">View Details</button>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card reveal">
+        
+        <div class="project-info">
+          <h3>Hotels & Tourist Sites Management System</h3>
+          <p>A one-stop platform for hotel and tour bookings in Kenya with admin dashboard and notifications.</p>
+          <button class="btn view-details" data-project="tourism">View Details</button>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card reveal">
+        
+        <div class="project-info">
+          <h3>Personal Portfolio Website</h3>
+          <p>A responsive portfolio built using HTML, CSS, and JavaScript to showcase my professional work.</p>
+          <button class="btn view-details" data-project="portfolio">View Details</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal (hidden by default) -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <a href="#" id="modalLink" target="_blank" class="btn">Visit Project</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year4"></span> Kimtex. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Project modal data
+    const projectDetails = {
+      bookshop: {
+        title: "Web-Based Bookshop System",
+        description:
+          "A dynamic PHP and MySQL system with login, admin panel, sales charts, automated M-Pesa payment verification, and a clean user interface. Built to streamline book sales and order tracking online.",
+        link: "#"
+      },
+      tourism: {
+        title: "Hotels & Tourist Sites Management System",
+        description:
+          "A one-stop management system for hotels and tourist attractions in Kenya. Includes room booking, tour reservations, profit analytics, and admin notifications — developed for smooth user experience.",
+        link: "#"
+      },
+      portfolio: {
+        title: "Personal Portfolio Website",
+        description:
+          "My personal website featuring my background, skills, and project portfolio. Fully responsive, mobile-friendly, and hosted on GitHub Pages.",
+        link: "#"
+      }
+    };
+
+    const modal = document.getElementById('projectModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalLink = document.getElementById('modalLink');
+
+    document.querySelectorAll('.view-details').forEach(b
